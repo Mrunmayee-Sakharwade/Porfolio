@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRUNMAYEE SAKHARWADE | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="visual-enhancements.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+</head>
+<body class="dark-mode">
+    <header>
+        <div class="container fade-in-down">
+            <h1>MRUNMAYEE SAKHARWADE</h1>
+            <p class="location"><span class="icon"><i class="fas fa-map-marker-alt"></i></span> Nagpur, Maharashtra</p>
+            <div class="contact-info">
+                <a href="mailto:sakharawademrunmayee@gmail.com" class="btn"><span class="icon"><i class="fas fa-envelope"></i></span> Email</a>
+                <span class="btn"><span class="icon"><i class="fas fa-phone"></i></span> (+91)8421293680</span>
+                <a href="https://github.com/Mrunmayee-Sakharwade" target="_blank" class="btn" rel="noopener noreferrer"><span class="icon"><i class="fab fa-github"></i></span> GitHub</a>
+                <a href="https://www.linkedin.com/in/mrunmayee-sakharwade-090969245/" target="_blank" class="btn" rel="noopener noreferrer"><span class="icon"><i class="fab fa-linkedin"></i></span> LinkedIn</a>
+                <a href="https://drive.google.com/file/d/1bF6_Y_7Tb75mEvxSSh5u_HRCvee1Tw8m/view?usp=sharing" target="_blank" class="btn resume-link" rel="noopener noreferrer"><span class="icon"><i class="fas fa-file"></i></span> Resume</a>
+            </div>
+            <button id="mode-toggle" class="mode-toggle" aria-label="Toggle dark/bright mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav" id="stickyNav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>MS</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        
+
+        <section id="about" class="fade-in scroll-reveal">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="about-intro">
+                            <p class="intro-highlight">Passionate AI/ML Engineer & Computer Science Student</p>
+                            <p>I'm Mrunmayee Sakharwade, a dedicated Computer Science student specializing in AI/ML at VIT Bhopal. With a strong foundation in machine learning, deep learning, and software development, I'm passionate about creating innovative solutions that make a real impact.</p>
+                        </div>
+                        
+                        <div class="about-highlights">
+                            <div class="highlight-card">
+                                <div class="highlight-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="highlight-content">
+                                    <h4>AI/ML Expertise</h4>
+                                    <p>Specialized in CNNs, NLP, LLMs, and RAG systems with hands-on experience in TensorFlow, Keras, and advanced ML frameworks.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="highlight-card">
+                                <div class="highlight-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="highlight-content">
+                                    <h4>Full-Stack Development</h4>
+                                    <p>Proficient in Python, Java, and web technologies with experience building scalable applications and interactive dashboards.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="highlight-card">
+                                <div class="highlight-icon">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                                <div class="highlight-content">
+                                    <h4>Cloud & DevOps</h4>
+                                    <p>Experienced with Docker, Azure, and modern deployment practices for building robust, scalable solutions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">3+</div>
+                                <div class="stat-label">Major Projects</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">5+</div>
+                                <div class="stat-label">Certifications</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-visual">
+                        <div class="profile-card">
+                            <div class="profile-header">
+                                <div class="profile-avatar">
+                                    <i class="fas fa-user-graduate"></i>
+                                </div>
+                                <div class="profile-info">
+                                    <h3>Mrunmayee Sakharwade</h3>
+                                    <p>AI/ML Engineer & CS Student</p>
+                                    <div class="profile-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Nagpur, Maharashtra</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <div>
+                                        <strong>B.Tech in Computer Science</strong>
+                                        <span>VIT Bhopal (2021-2025)</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="detail-item">
+                                    <i class="fas fa-star"></i>
+                                    <div>
+                                        <strong>Specialization</strong>
+                                        <span>Artificial Intelligence & Machine Learning</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <div>
+                                        <strong>Leadership</strong>
+                                        <span>Technical Head, Marathi Club (2021-2024)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-interests">
+                                <h4>Interests & Hobbies</h4>
+                                <div class="interest-tags">
+                                    <span class="interest-tag"><i class="fas fa-book"></i> Reading Fiction</span>
+                                    <span class="interest-tag"><i class="fas fa-music"></i> Dancing</span>
+                                    <span class="interest-tag"><i class="fas fa-microphone"></i> Karaoke</span>
+                                    <span class="interest-tag"><i class="fas fa-mountain"></i> Trekking</span>
+                                    <span class="interest-tag"><i class="fas fa-globe"></i> Exploring Cultures</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="academics" class="fade-in scroll-reveal">
+            <h2>Academics</h2>
+            <ul>
+                <li>
+                    <strong>Vellore Institute of Technology, Bhopal</strong> <span class="date">2021–2025</span><br>
+                    B.Tech in Computer Science (Specialization in AIML)
+                </li>
+                <li>
+                    <strong>Yashodha Public School, Nagpur</strong> <span class="date">2020–2021</span><br>
+                    XII (State Board)
+                </li>
+                <li>
+                    <strong>Royal Public School, Bhandara</strong> <span class="date">2018–2019</span><br>
+                    X (CBSE)
+                </li>
+            </ul>
+        </section>
+
+    
+
+        <section id="skills" class="fade-in scroll-reveal">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-container">
+                <!-- Skills Navigation Tabs -->
+                <div class="skills-tabs">
+                    <button class="skills-tab active" data-tab="languages">
+                        <i class="fas fa-code"></i>
+                        <span>Languages</span>
+                    </button>
+                    <button class="skills-tab" data-tab="frameworks">
+                        <i class="fas fa-layer-group"></i>
+                        <span>Libraries & Frameworks</span>
+                    </button>
+                    <button class="skills-tab" data-tab="technologies">
+                        <i class="fas fa-brain"></i>
+                        <span>AI/ML Technologies</span>
+                    </button>
+                    <button class="skills-tab" data-tab="tools">
+                        <i class="fas fa-tools"></i>
+                        <span>Cloud & Tools</span>
+                    </button>
+                </div>
+
+                <!-- Skills Content Panels -->
+                <div class="skills-content">
+                    <!-- Languages Panel -->
+                    <div class="skills-panel active" id="languages-panel">
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                                </div>
+                                <span class="skill-name">Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                                </div>
+                                <span class="skill-name">Java</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                    
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
+                                </div>
+                                <span class="skill-name">SQL</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Libraries & Frameworks Panel -->
+                    <div class="skills-panel" id="frameworks-panel">
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow">
+                                </div>
+                                <span class="skill-name">TensorFlow</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask">
+                                </div>
+                                <span class="skill-name">Flask</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas">
+                                </div>
+                                <span class="skill-name">Pandas</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="92%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy">
+                                </div>
+                                <span class="skill-name">NumPy</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn">
+                                </div>
+                                <span class="skill-name">Scikit-learn</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="OpenCV">
+                                </div>
+                                <span class="skill-name">OpenCV</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                    
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="Matplotlib">
+                                </div>
+                                <span class="skill-name">Matplotlib</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="87%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://streamlit.io/images/brand/streamlit-mark-color.svg" alt="Streamlit">
+                                </div>
+                                <span class="skill-name">Streamlit</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="83%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI/ML Technologies Panel -->
+                    <div class="skills-panel" id="technologies-panel">
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-robot" style="font-size: 24px; color: #4facfe;"></i>
+                                </div>
+                                <span class="skill-name">LLMs (Mistral)</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-search" style="font-size: 24px; color: #667eea;"></i>
+                                </div>
+                                <span class="skill-name">RAG</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                  
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-eye" style="font-size: 24px; color: #f093fb;"></i>
+                                </div>
+                                <span class="skill-name">CNNs</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="82%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-comments" style="font-size: 24px; color: #f5576c;"></i>
+                                </div>
+                                <span class="skill-name">NLP</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-project-diagram" style="font-size: 24px; color: #00f2fe;"></i>
+                                </div>
+                                <span class="skill-name">RESTful APIs</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="86%"></div>
+
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-vector-square" style="font-size: 24px; color: #764ba2;"></i>
+                                </div>
+                                <span class="skill-name">SentenceTransformers</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="84%"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cloud & Tools Panel -->
+                    <div class="skills-panel" id="tools-panel">
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                                </div>
+                                <span class="skill-name">Git</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+                                </div>
+                                <span class="skill-name">Docker</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75%"></div>
+
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure">
+                                </div>
+                                <span class="skill-name">Azure</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70%"></div>
+
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-chart-bar" style="font-size: 24px; color: #f39c12;"></i>
+                                </div>
+                                <span class="skill-name">Power BI</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                    
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite">
+                                </div>
+                                <span class="skill-name">SQLite</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-database" style="font-size: 24px; color: #667eea;"></i>
+                                </div>
+                                <span class="skill-name">Qdrant</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="82%"></div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="fade-in scroll-reveal">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p class="section-subtitle">Explore my latest work in AI/ML and software development</p>
+            </div>
+            
+            <div class="horizontal-scroll-container">
+                <div class="scroll-nav scroll-nav-left" onclick="scrollProjects('left')">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                
+                <div class="projects-horizontal-scroll" id="projectsScroll">
+                    <div class="project-card-horizontal">
+                        <div class="project-image">
+                            <div class="project-icon">
+                                <i class="fas fa-tv"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <span class="project-category">Recommendation System</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>WatchaDoin'? OTT Recommender</h3>
+                                <span class="project-duration">Dec 2024 - Apr 2025</span>
+                            </div>
+                            
+                            <p class="project-summary">AI-powered OTT recommendation engine with personalized mood-based suggestions and interactive dashboards.</p>
+                            
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Java (SMILE)</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">Power BI</span>
+                            </div>
+                            
+                            <div class="project-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-brain"></i>
+                                    <span>ML Algorithms</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <span>Analytics Dashboard</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-user-cog"></i>
+                                    <span>Personalization</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-actions">
+                                <button class="project-btn primary" onclick="toggleProjectDetails(this)">
+                                    <span>View Details</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="project-details" style="display: none;">
+                            <ul>
+                                <li>Developed a user-personalized OTT recommendation engine using Python, Java (SMILE), and Flask that responds to viewer moods, genres, and platform preferences.</li>
+                                <li>Created an interactive and customisable interface using Flask and HTML/CSS, with smart preference reuse and timestamped history tracking.</li>
+                                <li>Added Power BI dashboards to display dynamic viewing patterns and provide informative trends depending on user behavior.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card-horizontal">
+                        <div class="project-image">
+                            <div class="project-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <span class="project-category">LLM & RAG</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>SeekIt: Semantic Search Tool</h3>
+                                <span class="project-duration">Jul 2024 - Oct 2024</span>
+                            </div>
+                            
+                            <p class="project-summary">Local RAG-based semantic search engine powered by LLMs with floating UI and persistent chat experience.</p>
+                            
+                            <div class="tech-stack">
+                                <span class="tech-tag">LLMs</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Ollama</span>
+                                <span class="tech-tag">Qdrant</span>
+                            </div>
+                            
+                            <div class="project-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-robot"></i>
+                                    <span>LLM Integration</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-database"></i>
+                                    <span>Vector Database</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-comments"></i>
+                                    <span>Chat Interface</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-actions">
+                                <button class="project-btn primary" onclick="toggleProjectDetails(this)">
+                                    <span>View Details</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="project-details" style="display: none;">
+                            <ul>
+                                <li>Developed SeekIt, a local RAG-based semantic search engine powered by LLMs, with a floating UI and persistent discussion state for an intuitive, chat-like experience.</li>
+                                <li>Mistral LLM was deployed using Docker and Ollama to provide offline, self-contained inference that is accessible via lightweight REST APIs.</li>
+                                <li>Scalable ingestion and embedding pipelines were created using SentenceTransformers and Qdrant, allowing for high-performance semantic retrieval of local texts.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card-horizontal">
+                        <div class="project-image">
+                            <div class="project-icon">
+                                <i class="fas fa-baby"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <span class="project-category">Medical AI</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Fetal AI using AIML</h3>
+                                <span class="project-duration">Dec 2023 - May 2024</span>
+                            </div>
+                            
+                            <p class="project-summary">CNN-based system for detecting prenatal abnormalities in ultrasound scans with advanced image processing.</p>
+                            
+                            <div class="tech-stack">
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Keras</span>
+                                <span class="tech-tag">CNNs</span>
+                                <span class="tech-tag">OpenCV</span>
+                            </div>
+                            
+                            <div class="project-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-eye"></i>
+                                    <span>Computer Vision</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-heartbeat"></i>
+                                    <span>Medical Analysis</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-cogs"></i>
+                                    <span>Deep Learning</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-actions">
+                                <button class="project-btn primary" onclick="toggleProjectDetails(this)">
+                                    <span>View Details</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="project-details" style="display: none;">
+                            <ul>
+                                <li>To detect prenatal abnormalities in ultrasound scans, we created and fine-tuned Convolutional Neural Networks (CNNs) with TensorFlow and Keras.</li>
+                                <li>Use NumPy and Pandas for structured data preprocessing, and automate the entire training pipeline to improve model efficiency.</li>
+                                <li>Improved detection performance with enhanced picture enhancement, normalization, and domain-specific medical preprocessing techniques.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-nav scroll-nav-right" onclick="scrollProjects('right')">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="fade-in scroll-reveal">
+            <h2 class="section-title">My <span class="highlight">Certifications</span></h2>
+            <p class="section-subtitle">Explore my professional credentials and learning journey</p>
+            
+            <div class="cert-tabs-container">
+                <div class="cert-tabs-header">
+                    <div class="cert-tab active" data-tab="coursera">
+                        <i class="fab fa-coursera"></i> Coursera
+                    </div>
+                    <div class="cert-tab" data-tab="smartinternz">
+                        <i class="fas fa-laptop-code"></i> SmartInternz
+                    <div class="cert-header">
+                        <i class="fas fa-certificate" style="color:#4facfe;"></i>
+                        <h3>Smart Internz</h3>
+                    </div>
+                    <ul class="cert-list">
+                        <li>
+                            <span class="cert-title">AI & ML Externship Certificate</span>
+                            <span class="cert-date">2023</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <i class="fas fa-certificate" style="color:#667eea;"></i>
+                        <h3>Microsoft</h3>
+                    </div>
+                    <ul class="cert-list">
+                        <li>
+                            <span class="cert-title">Azure Administrator (AZ-104)</span>
+                            <span class="cert-date">2023</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <i class="fas fa-certificate" style="color:#f093fb;"></i>
+                        <h3>Forage</h3>
+                    </div>
+                    <ul class="cert-list">
+                        <li>
+                            <span class="cert-title">Quantium Analytics Virtual Internship</span>
+                            <span class="cert-date">2023</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="extracurricular" class="fade-in scroll-reveal">
+            <h2>Extracurricular & Achievements</h2>
+            <ul>
+                <li>Technical Head, Marathi Club (2021–2024): Led technical operations and logistics for Inter-University Cultural Festival.</li>
+                <li>Completed Quantium Data Analytics Virtual Experience (Forage), delivered actionable commercial insights.</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="fade-in scroll-reveal">
+            <div class="contact-container">
+                <div class="contact-header">
+                    <h2>Get In Touch</h2>
+                    <p class="contact-subtitle">Let's discuss how we can work together to bring your ideas to life</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>sakharawademrunmayee@gmail.com</p>
+                                <a href="mailto:sakharawademrunmayee@gmail.com" class="contact-link">Send Message</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <p>(+91) 8421293680</p>
+                                <a href="tel:+918421293680" class="contact-link">Call Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-section">
+                        <div class="contact-form">
+                            <h3>Send a Message</h3>
+                            <form id="contactForm">
+                                <div class="form-group">
+                                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="submit-btn">
+                                    <span>Send Message</span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-cta">
+                    <div class="cta-buttons">
+                        <a href="https://drive.google.com/file/d/1bF6_Y_7Tb75mEvxSSh5u_HRCvee1Tw8m/view?usp=sharing" target="_blank" class="cta-btn primary">
+                            <i class="fas fa-download"></i>
+                            <span>Download Resume</span>
+                        </a>
+                        <a href="mailto:sakharawademrunmayee@gmail.com?subject=Collaboration%20Opportunity" class="cta-btn secondary">
+                            <i class="fas fa-handshake"></i>
+                            <span>Let's Collaborate</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="fade-in-up">
+        <p>&copy; 2025 MRUNMAYEE SAKHARWADE. All rights reserved.</p>
+    </footer>
+    
+    <!-- Enhanced JavaScript for modern interactivity -->
+    <script src="script.js"></script>
+    <script src="enhanced-animations.js"></script>
+    <script src="particles.js"></script>
+</body>
+</html>

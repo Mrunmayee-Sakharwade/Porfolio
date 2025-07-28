@@ -1,0 +1,375 @@
+/* Visual Enhancements for Portfolio */
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Space for fixed header */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #3f51b5, #9c27b0);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #5c6bc0, #ab47bc);
+}
+
+body.bright-mode ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #7986cb, #ba68c8);
+}
+
+body.bright-mode ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #9fa8da, #ce93d8);
+}
+
+/* Custom Cursor */
+.custom-cursor {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #3f51b5;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(63, 81, 181, 0.1);
+    backdrop-filter: blur(2px);
+}
+
+.custom-cursor-dot {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: #3f51b5;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease, width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+}
+
+.cursor-text {
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.custom-cursor.cursor-hover {
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: rgba(63, 81, 181, 0.3);
+    border-color: #3f51b5;
+}
+
+.custom-cursor-dot.cursor-dot-hover {
+    transform: translate(-50%, -50%) scale(0.5);
+    background-color: #ff4081;
+}
+
+.custom-cursor.cursor-click {
+    transform: translate(-50%, -50%) scale(0.8);
+    background-color: rgba(255, 64, 129, 0.3);
+    border-color: #ff4081;
+}
+
+.custom-cursor-dot.cursor-dot-click {
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: #ff4081;
+}
+
+/* Hide cursor on touch devices */
+@media (hover: none) {
+    .custom-cursor,
+    .custom-cursor-dot {
+        display: none;
+    }
+    body {
+        cursor: auto !important;
+    }
+}
+
+/* Particle Canvas */
+#particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Dark mode adjustments */
+body.dark-mode #particle-canvas {
+    opacity: 0.2;
+}
+
+/* Bright mode adjustments */
+body.bright-mode #particle-canvas {
+    opacity: 0.1;
+}
+
+/* Animated Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(103, 58, 183, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(33, 150, 243, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 50% 50%, rgba(233, 30, 99, 0.1) 0%, transparent 30%);
+    z-index: -1;
+    animation: gradientShift 15s ease infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navigation and Button Styles */
+.nav-links a, .btn, .nav-link {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.nav-links a::before, 
+.btn::before, 
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #3f51b5, #9c27b0);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.nav-links a:hover::before,
+.btn:hover::before,
+.nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Button Hover Effects */
+.btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+    border: none;
+    background: linear-gradient(45deg, #3f51b5, #9c27b0);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(63, 81, 181, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(63, 81, 181, 0.4);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* Social Icons */
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #3f51b5, #9c27b0);
+    z-index: -1;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+}
+
+.social-links a:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(63, 81, 181, 0.4);
+}
+
+.social-links a:hover::before {
+    transform: scale(1);
+}
+
+/* Card Hover Effects */
+.project-card, .cert-card, .skill-category {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.project-card::before, .cert-card::before, .skill-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.project-card:hover, .cert-card:hover, .skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover::before, .cert-card:hover::before, .skill-category:hover::before {
+    transform: translateX(100%);
+}
+
+/* Animated Icons */
+.skill-icon, .project-icon, .cert-icon {
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover .skill-icon, 
+.project-card:hover .project-icon,
+.cert-card:hover .cert-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Glow Effects */
+.highlight {
+    position: relative;
+    display: inline-block;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #00bcd4, #3f51b5);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.highlight:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(45deg, #2196f3, #e91e63);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .project-card, .cert-card, .skill-category {
+        margin: 15px 0;
+    }
+    
+    .highlight::after {
+        height: 2px;
+    }
+}
