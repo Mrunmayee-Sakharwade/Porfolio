@@ -2644,7 +2644,7 @@ body.bright-mode::after {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+       height: 100%;
 }
 
 .glitch-text::before {
@@ -3483,65 +3483,50 @@ body.bright-mode .project-details {
     right: 0;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .contact-info {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-header h2 {
-        font-size: 2.5rem;
-    }
-    
-    .section-header h2 {
-        font-size: 2.5rem;
-    }
-    
-    .horizontal-scroll-container {
-        padding: 0 2rem;
-    }
-    
-    .project-card-horizontal {
-        flex: 0 0 320px;
-    }
-    
-    .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .scroll-nav {
-        display: none;
-    }
+/* Certifications Section */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
-
-@media (max-width: 480px) {
-    .contact-container {
-        padding: 2rem 1rem;
-    }
-    
-    .contact-form-section {
-        padding: 2rem;
-    }
-    
-    .contact-header h2 {
-        font-size: 2rem;
-    }
-    
-    .section-header h2 {
-        font-size: 2rem;
-    }
-    
-    .horizontal-scroll-container {
-        padding: 0 1rem;
-    }
-    
-    .project-card-horizontal {
-        flex: 0 0 280px;
-    }
+.cert-card {
+    background: var(--panel-bg, #181818);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 1.5rem 1.2rem;
+    transition: transform 0.2s;
+}
+.cert-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+.cert-header {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+}
+.cert-header i {
+    font-size: 1.7rem;
+}
+.cert-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.cert-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    font-size: 1rem;
+}
+.cert-title {
+    font-weight: 500;
+}
+.cert-date {
+    font-size: 0.95em;
+    color: #aaa;
 }
