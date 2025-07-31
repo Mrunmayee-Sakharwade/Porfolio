@@ -801,7 +801,7 @@ function initHeaderEmailLink() {
         headerEmailBtn.addEventListener('click', function(e) {
             e.preventDefault();
             const email = 'sakharawademrunmayee@gmail.com';
-            
+        
             // Try to open email client
             try {
                 window.location.href = `mailto:${email}`;
