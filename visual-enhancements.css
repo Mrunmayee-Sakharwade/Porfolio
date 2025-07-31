@@ -361,7 +361,7 @@ body::before {
 .tooltip:hover .tooltip-text {
     visibility: visible;
     opacity: 1;
-}
+} 
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
