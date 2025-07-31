@@ -151,7 +151,6 @@ class ParticleSystem {
         }
     }
 }
-
 // Initialize particle system when the page loads
 window.addEventListener('load', () => {
     new ParticleSystem('particle-canvas', {
